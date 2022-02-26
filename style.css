@@ -1,0 +1,165 @@
+/* Import red had google font */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
+
+/* Color used*/
+:root {
+    /* primary*/
+    --paleblue: hsl(225, 100%, 94%);
+    --brightblue: hsl(245, 75%, 52%);
+    --white: #fff;
+    
+    /*neutral*/
+    --verypaleblue: hsl(225, 100%, 98%);
+    --desaturatedblue: hsl(224, 23%, 55%);
+    --darkblue: hsl(223, 47%, 23%);
+}
+
+/*General setting for html*/
+html {
+    font-family: 'Red Hat Display';
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+/*Box sizing*/
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body{
+    background: url("./images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: var(--paleblue);
+    width: 100%;   
+    text-align: center;
+    padding-top: 60px;
+}
+
+.container {
+    display: block;
+    width: 26%;
+    border-radius: 20px;
+    margin: 0 auto;
+    background-color: var(--white);
+}
+
+/* Styling the header*/
+header img {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--darkblue);
+}
+
+header p {    
+    padding-right: 20px;
+    padding-left: 20px; 
+    font-weight: 700;
+    color: hsl(224, 23%, 55%);
+    font-size: 0.8rem;
+}
+
+/*Styling main: the pricing*/
+main {
+    display: flex;
+    background-color: hsl(225, 100%, 98%);
+    justify-content: space-around;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+}
+
+/* Styling the icon music image*/
+main img {
+    width: 70%;
+}
+
+main p, span {
+    display: block;
+    font-size: 1rem;
+}
+
+main p {
+    color:hsl(223, 47%, 23%);
+    font-weight: 900;
+    font-size: .8rem;
+}
+
+main span {
+    color: hsl(224, 23%, 55%);
+    font-weight: 900;
+    font-size: 0.7rem;
+}
+
+main a {
+    color: hsl(245, 75%, 52%);
+    font-size: 0.8rem;
+    font-weight: 900;
+    ;
+}
+
+main a:hover {
+    text-decoration: none;
+}
+
+/*Styling the button*/
+
+.payment, .cancel {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+}
+
+.payment {
+    border-radius: 10px;
+    background-color: hsl(245, 75%, 52%);
+    box-shadow: 0px 5px 10px 0px hsl(245, 75%, 52%);
+    color: #fff;
+    width: 75%;
+    height: 30px;
+    border:none; 
+    font-weight: 700;
+    color: hsl(225, 100%, 98%);
+}
+
+.cancel {
+    border: none;
+    color: hsl(224, 23%, 55%);
+    border-radius: 5px;
+    background: none;
+    margin-bottom: 40px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.payment[value="submit"]:hover {
+    opacity:0.5;
+}
+
+.cancel[value="submit"]:hover {
+    color: black;
+}
+
+/* Responsive design for screen around 375px*/
+@media only screen and (max-width:450px) {
+    body {
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+        font-size: 0.1rem;
+    }
+    h1 {
+        font-weight: 900;
+        font-size: 1rem;
+        color: var(--darkblue);
+    }
+}
